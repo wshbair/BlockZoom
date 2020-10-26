@@ -31,8 +31,10 @@ The tested is built to run on Grid5000 Platform
    ```
    ./BlockZoom.sh
    ```
-
+## Demo 
+[demo.png](https://www.youtube.com/watch?v=rK07p4nv1io)
 ## Developed by 
 - Dr. Wazen Shbair [@wshbair](https://github.com/wshbair) 
 
-[Demo](https://www.youtube.com/watch?v=rK07p4nv1io)
+
+
