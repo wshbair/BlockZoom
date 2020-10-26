@@ -1,6 +1,6 @@
 <img src="logo.png" width="150">
 
-# BlockZoom: Large Scale Blockchain Testbed
+## Large Scale Blockchain Testbed
 
 A reproducible environment for experimenting distributed ledgers technologies and smart contract applications.
 The tested is built to run on Grid5000 Platform 
@@ -21,14 +21,17 @@ The tested is built to run on Grid5000 Platform
    ```
    
 2. Get a copy of the reprository
-```sh
-git clone git@github.com:wshbair/BlockZoom.git
-```
+  
+   ```sh
+   git clone git@github.com:wshbair/BlockZoom.git
+   ```
 
 3. The Entry point to the testbed
-```
-./BlockZoom.sh
-```
+  
+   ```
+   ./BlockZoom.sh
+   ```
+
 ## Developed by 
 - Dr. Wazen Shbair [@wshbair](https://github.com/wshbair) 
 
