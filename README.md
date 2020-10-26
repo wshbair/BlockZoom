@@ -22,7 +22,7 @@ The tested is built to run on Grid5000 Platform
    
 2. Get a copy of the reprository
 ```sh
-git clone 
+git clone git@github.com:wshbair/BlockZoom.git
 ```
 
 3. The Entry point to the testbed
