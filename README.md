@@ -1,13 +1,13 @@
 <img src="logo.png" width="150">
 
-#BlockZoom: Large Scale Blockchain Testbed
+# BlockZoom: Large Scale Blockchain Testbed
 
 A reproducible environment for experimenting distributed ledgers technologies and smart contract applications.
 The tested is built to run on Grid5000 Platform 
 
 ## Installation
 
-0. Install prerequisites
+1. Install prerequisites
    To install latest release from RubyGems:
    
    ```
@@ -20,9 +20,14 @@ The tested is built to run on Grid5000 Platform
    $ export PATH=$PATH:$(ruby -e 'puts "#{Gem.user_dir}/bin"')
    ```
    
-1. Get a copy of the reprository
+2. Get a copy of the reprository
 ```sh
-git clone git@github.com:wshbair/PayIDSecure.git
+git clone 
+```
+
+3. The Entry point to the testbed
+```
+./BlockZoom.sh
 ```
 ## Developed by 
 - Dr. Wazen Shbair [@wshbair](https://github.com/wshbair) 
