@@ -1,0 +1,79 @@
+
+<html>
+<head><title>(nokia) Geth v1.9.23 with 1500 txs: 199.6 TPS</title></head>
+<body>
+
+<h2>(nokia) Geth v1.9.23 with 1500 txs: 199.6 TPS</h2>
+
+<h3>information:</h3>
+<PRE>NODE: Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15 on http://localhost:8084
+      consensus=ethash chain_name=??? chain_id=15 network_id=3576
+SEND: 1500 transactions in blocks 1163-1170 with 10 empty blocks following.
+      A sample of transactions looked as if they: succeeded.
+TPS:  The stopclock watcher measured a final TPS of 199.1 since contract deploy,
+      and in between saw values as high as 206.5 TPS.
+DIAG: The whole experiment was prefixed 'nokia'.
+      The diagrams were saved into 'img/nokia-20201026-0115_blks1163-1170.png'.
+      Looking only at the experiment block-timestamps, the overall TPS was ~199.6.
+</PRE>
+
+<h3>log:</h3>
+<PRE>versions: web3 4.8.2, py-solc: 3.2.0, solc 0.4.25+commit.59dbf8f1.Linux.gpp, testrpc 1.3.5, python 3.6.9 (default, Oct  8 2020, 12:12:24) [GCC 8.4.0]
+web3 connection established, blockNumber = 1156, node version string =  Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15
+first account of node is 0x78B5AD702Bb251670c8cf5029BCd22665Fd65E33, balance is 1306.0625 Ether
+nodeName: Geth, nodeType: Geth, nodeVersion: v1.9.23-stable-8c2f2715, consensus: ethash, network: 3576, chainName: ???, chainId: 15
+
+Block  1156  - waiting for something to happen
+(filedate 1603670831) last contract address: 0xe4dCF7e61bf00733eCC5062A6a4a2e08b7372e5e
+(filedate 1603671318) new contract address: 0x6D1C0D7403162b516757440D86E6cB5E9d9bB510
+
+blocknumber_start_here = 1161
+starting timer, at block 1161 which has  1  transactions; at epochtime 1603671318.51044
+block 1162 | new #TX   0 / 3000 ms =   0.0 TPS_current | total: #TX    1 /  1.5 s =   0.7 TPS_average (peak  is   0.7 TPS_average)
+block 1163 | new #TX 103 / 1000 ms = 103.0 TPS_current | total: #TX  104 /  2.2 s =  48.1 TPS_average (peak  is  48.1 TPS_average)
+block 1164 | new #TX 182 / 1000 ms = 182.0 TPS_current | total: #TX  286 /  3.1 s =  92.2 TPS_average (peak  is  92.2 TPS_average)
+block 1165 | new #TX 269 / 1000 ms = 269.0 TPS_current | total: #TX  555 /  3.7 s = 148.3 TPS_average (peak  is 148.3 TPS_average)
+block 1166 | new #TX 167 / 1000 ms = 167.0 TPS_current | total: #TX  722 /  5.0 s = 144.6 TPS_average (peak was 148.3 TPS_average)
+block 1167 | new #TX 281 / 1000 ms = 281.0 TPS_current | total: #TX 1003 /  5.6 s = 178.0 TPS_average (peak  is 178.0 TPS_average)
+block 1168 | new #TX 230 / 1000 ms = 230.0 TPS_current | total: #TX 1233 /  6.0 s = 206.5 TPS_average (peak  is 206.5 TPS_average)
+block 1169 | new #TX   7 / 1000 ms =   7.0 TPS_current | total: #TX 1240 /  7.2 s = 172.1 TPS_average (peak was 206.5 TPS_average)
+block 1170 | new #TX 261 / 1000 ms = 261.0 TPS_current | total: #TX 1501 /  7.5 s = 199.1 TPS_average (peak was 206.5 TPS_average)
+block 1171 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 10.0 s = 150.1 TPS_average (peak was 206.5 TPS_average)
+block 1172 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 11.2 s = 133.6 TPS_average (peak was 206.5 TPS_average)
+block 1173 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 11.9 s = 126.6 TPS_average (peak was 206.5 TPS_average)
+block 1175 | new #TX   0 / 4000 ms =   0.0 TPS_current | total: #TX 1501 / 14.9 s = 100.6 TPS_average (peak was 206.5 TPS_average)
+block 1176 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 15.5 s =  96.6 TPS_average (peak was 206.5 TPS_average)
+block 1177 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 18.6 s =  80.7 TPS_average (peak was 206.5 TPS_average)
+block 1178 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 1501 / 19.2 s =  78.1 TPS_average (peak was 206.5 TPS_average)
+block 1180 | new #TX   0 / 3000 ms =   0.0 TPS_current | total: #TX 1501 / 21.1 s =  71.3 TPS_average (peak was 206.5 TPS_average)
+Received signal from send.py = updated INFOFILE.
+Experiment ended! Current blocknumber = 1180
+Updated info file: last-experiment.json THE END.
+</PRE>
+
+<h3>diagrams:</h3>
+img/nokia-20201026-0115_blks1163-1170.png
+<img src="../../reader/img/nokia-20201026-0115_blks1163-1170.png"/>
+<h3>info raw</h3>
+<small>{'diagrams': {'blocktimestampsTpsAv': 199.57142857142858,
+              'filename': 'img/nokia-20201026-0115_blks1163-1170.png',
+              'prefix': 'nokia'},
+ 'node': {'chain_id': 15,
+          'chain_name': '???',
+          'consensus': 'ethash',
+          'name': 'Geth',
+          'network_id': 3576,
+          'rpc_address': 'http://localhost:8084',
+          'type': 'Geth',
+          'version': 'v1.9.23-stable-8c2f2715',
+          'web3.version.node': 'Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15'},
+ 'send': {'block_first': 1163,
+          'block_last': 1170,
+          'empty_blocks': 10,
+          'num_txs': 1500,
+          'sample_txs_successful': True},
+ 'tps': {'finalTpsAv': 199.06485822752887,
+         'peakTpsAv': 206.52762829754695,
+         'start_epochtime': 1603671318.51044}}</small>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+<html>
+<head><title>(iphone) Geth v1.9.23 with 15000 txs: 167.4 TPS</title></head>
+<body>
+
+<h2>(iphone) Geth v1.9.23 with 15000 txs: 167.4 TPS</h2>
+
+<h3>information:</h3>
+<PRE>NODE: Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15 on http://localhost:8084
+      consensus=ethash chain_name=??? chain_id=15 network_id=3576
+SEND: 15000 transactions in blocks 1318-1380 with 10 empty blocks following.
+      A sample of transactions looked as if they: succeeded.
+TPS:  The stopclock watcher measured a final TPS of 161.2 since contract deploy,
+      and in between saw values as high as 178.9 TPS.
+DIAG: The whole experiment was prefixed 'iphone'.
+      The diagrams were saved into 'img/iphone-20201026-0118_blks1318-1380.png'.
+      Looking only at the experiment block-timestamps, the overall TPS was ~167.4.
+</PRE>
+
+<h3>log:</h3>
+<PRE>versions: web3 4.8.2, py-solc: 3.2.0, solc 0.4.25+commit.59dbf8f1.Linux.gpp, testrpc 1.3.5, python 3.6.9 (default, Oct  8 2020, 12:12:24) [GCC 8.4.0]
+web3 connection established, blockNumber = 1311, node version string =  Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15
+first account of node is 0x283390fD02CB3493745Dc6A2efd574e9bFb6CC72, balance is 1450.75 Ether
+nodeName: Geth, nodeType: Geth, nodeVersion: v1.9.23-stable-8c2f2715, consensus: ethash, network: 3576, chainName: ???, chainId: 15
+
+Block  1311  - waiting for something to happen
+(filedate 1603670605) last contract address: 0x4179aa967ed778627746eDD099A3f28b0b74F71F
+(filedate 1603671526) new contract address: 0x69530E585B7Ff122fEDb249C77D77Fa7C9E3c3CF
+
+blocknumber_start_here = 1316
+starting timer, at block 1316 which has  1  transactions; at epochtime 1603671526.6207182
+block 1317 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX    1 /  1.5 s =   0.7 TPS_average (peak  is   0.7 TPS_average)
+block 1318 | new #TX 100 / 1000 ms = 100.0 TPS_current | total: #TX  101 /  1.9 s =  54.3 TPS_average (peak  is  54.3 TPS_average)
+block 1319 | new #TX  75 / 1000 ms =  75.0 TPS_current | total: #TX  176 /  2.5 s =  70.8 TPS_average (peak  is  70.8 TPS_average)
+block 1320 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX  472 /  6.2 s =  76.6 TPS_average (peak  is  76.6 TPS_average)
+block 1321 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX  768 /  7.4 s = 103.6 TPS_average (peak  is 103.6 TPS_average)
+block 1322 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 1064 /  9.9 s = 107.7 TPS_average (peak  is 107.7 TPS_average)
+block 1323 | new #TX 296 / 3000 ms =  98.7 TPS_current | total: #TX 1360 / 10.2 s = 133.1 TPS_average (peak  is 133.1 TPS_average)
+block 1324 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 1656 / 11.5 s = 144.4 TPS_average (peak  is 144.4 TPS_average)
+block 1326 | new #TX 592 / 8000 ms =  74.0 TPS_current | total: #TX 2248 / 19.1 s = 117.6 TPS_average (peak was 144.4 TPS_average)
+block 1328 | new #TX 592 / 2000 ms = 296.0 TPS_current | total: #TX 2840 / 21.0 s = 135.3 TPS_average (peak was 144.4 TPS_average)
+block 1329 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 3136 / 24.1 s = 130.2 TPS_average (peak was 144.4 TPS_average)
+block 1330 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 3432 / 24.7 s = 138.8 TPS_average (peak was 144.4 TPS_average)
+block 1332 | new #TX 592 / 2000 ms = 296.0 TPS_current | total: #TX 4024 / 25.7 s = 156.6 TPS_average (peak  is 156.6 TPS_average)
+block 1333 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 4320 / 27.6 s = 156.7 TPS_average (peak  is 156.7 TPS_average)
+block 1334 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 4616 / 28.2 s = 163.6 TPS_average (peak  is 163.6 TPS_average)
+block 1335 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 4912 / 28.9 s = 170.2 TPS_average (peak  is 170.2 TPS_average)
+block 1336 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 5208 / 35.9 s = 145.1 TPS_average (peak was 170.2 TPS_average)
+block 1337 | new #TX 296 / 6000 ms =  49.3 TPS_current | total: #TX 5504 / 36.5 s = 150.6 TPS_average (peak was 170.2 TPS_average)
+block 1338 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 5800 / 37.8 s = 153.5 TPS_average (peak was 170.2 TPS_average)
+block 1339 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 6096 / 38.4 s = 158.6 TPS_average (peak was 170.2 TPS_average)
+block 1340 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 6392 / 41.8 s = 152.8 TPS_average (peak was 170.2 TPS_average)
+block 1341 | new #TX 296 / 3000 ms =  98.7 TPS_current | total: #TX 6688 / 42.5 s = 157.4 TPS_average (peak was 170.2 TPS_average)
+block 1342 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 6984 / 43.1 s = 161.9 TPS_average (peak was 170.2 TPS_average)
+block 1343 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 7280 / 43.8 s = 166.2 TPS_average (peak was 170.2 TPS_average)
+block 1344 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 7576 / 45.7 s = 165.9 TPS_average (peak was 170.2 TPS_average)
+block 1345 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 7872 / 46.6 s = 168.9 TPS_average (peak was 170.2 TPS_average)
+block 1346 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 8168 / 47.0 s = 173.9 TPS_average (peak  is 173.9 TPS_average)
+block 1347 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 8464 / 47.3 s = 178.9 TPS_average (peak  is 178.9 TPS_average)
+block 1348 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 8760 / 49.8 s = 175.9 TPS_average (peak was 178.9 TPS_average)
+block 1349 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 9056 / 52.3 s = 173.2 TPS_average (peak was 178.9 TPS_average)
+block 1350 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 9352 / 56.9 s = 164.4 TPS_average (peak was 178.9 TPS_average)
+block 1352 | new #TX 592 / 6000 ms =  98.7 TPS_current | total: #TX 9944 / 57.3 s = 173.7 TPS_average (peak was 178.9 TPS_average)
+block 1353 | new #TX 248 / 1000 ms = 248.0 TPS_current | total: #TX 10192 / 59.7 s = 170.6 TPS_average (peak was 178.9 TPS_average)
+block 1355 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 10488 / 61.0 s = 171.9 TPS_average (peak was 178.9 TPS_average)
+block 1357 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 10784 / 62.0 s = 174.1 TPS_average (peak was 178.9 TPS_average)
+block 1358 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 10784 / 64.1 s = 168.2 TPS_average (peak was 178.9 TPS_average)
+block 1359 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 10784 / 65.3 s = 165.0 TPS_average (peak was 178.9 TPS_average)
+block 1360 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 11080 / 65.7 s = 168.7 TPS_average (peak was 178.9 TPS_average)
+block 1361 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 11376 / 67.3 s = 169.1 TPS_average (peak was 178.9 TPS_average)
+block 1362 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 11376 / 67.6 s = 168.3 TPS_average (peak was 178.9 TPS_average)
+block 1363 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 11672 / 68.5 s = 170.3 TPS_average (peak was 178.9 TPS_average)
+block 1364 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 11672 / 70.4 s = 165.8 TPS_average (peak was 178.9 TPS_average)
+block 1365 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 11968 / 71.7 s = 167.0 TPS_average (peak was 178.9 TPS_average)
+block 1366 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 11968 / 72.3 s = 165.6 TPS_average (peak was 178.9 TPS_average)
+block 1368 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 12264 / 72.9 s = 168.2 TPS_average (peak was 178.9 TPS_average)
+block 1370 | new #TX 592 / 2000 ms = 296.0 TPS_current | total: #TX 12856 / 76.0 s = 169.1 TPS_average (peak was 178.9 TPS_average)
+block 1371 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 13152 / 77.9 s = 168.8 TPS_average (peak was 178.9 TPS_average)
+block 1372 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 13448 / 80.1 s = 167.9 TPS_average (peak was 178.9 TPS_average)
+block 1373 | new #TX 296 / 2000 ms = 148.0 TPS_current | total: #TX 13744 / 80.4 s = 170.9 TPS_average (peak was 178.9 TPS_average)
+block 1374 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 13744 / 84.4 s = 162.9 TPS_average (peak was 178.9 TPS_average)
+block 1375 | new #TX 296 / 3000 ms =  98.7 TPS_current | total: #TX 14040 / 84.7 s = 165.7 TPS_average (peak was 178.9 TPS_average)
+block 1376 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 14336 / 85.4 s = 167.9 TPS_average (peak was 178.9 TPS_average)
+block 1377 | new #TX 296 / 1000 ms = 296.0 TPS_current | total: #TX 14632 / 86.9 s = 168.4 TPS_average (peak was 178.9 TPS_average)
+block 1378 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14632 / 88.4 s = 165.4 TPS_average (peak was 178.9 TPS_average)
+block 1379 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14632 / 90.9 s = 161.0 TPS_average (peak was 178.9 TPS_average)
+block 1380 | new #TX  73 / 3000 ms =  24.3 TPS_current | total: #TX 14705 / 91.2 s = 161.2 TPS_average (peak was 178.9 TPS_average)
+block 1382 | new #TX   0 / 2000 ms =   0.0 TPS_current | total: #TX 14705 / 92.5 s = 159.0 TPS_average (peak was 178.9 TPS_average)
+block 1384 | new #TX   0 / 4000 ms =   0.0 TPS_current | total: #TX 14705 / 96.7 s = 152.0 TPS_average (peak was 178.9 TPS_average)
+block 1385 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 97.7 s = 150.6 TPS_average (peak was 178.9 TPS_average)
+block 1386 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 98.0 s = 150.1 TPS_average (peak was 178.9 TPS_average)
+block 1387 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 101.0 s = 145.5 TPS_average (peak was 178.9 TPS_average)
+block 1388 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 101.7 s = 144.6 TPS_average (peak was 178.9 TPS_average)
+block 1389 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 103.2 s = 142.5 TPS_average (peak was 178.9 TPS_average)
+block 1390 | new #TX   0 / 1000 ms =   0.0 TPS_current | total: #TX 14705 / 104.1 s = 141.2 TPS_average (peak was 178.9 TPS_average)
+Received signal from send.py = updated INFOFILE.
+Experiment ended! Current blocknumber = 1390
+Updated info file: last-experiment.json THE END.
+</PRE>
+
+<h3>diagrams:</h3>
+img/iphone-20201026-0118_blks1318-1380.png
+<img src="../../reader/img/iphone-20201026-0118_blks1318-1380.png"/>
+<h3>info raw</h3>
+<small>{'diagrams': {'blocktimestampsTpsAv': 167.41573033707866,
+              'filename': 'img/iphone-20201026-0118_blks1318-1380.png',
+              'prefix': 'iphone'},
+ 'node': {'chain_id': 15,
+          'chain_name': '???',
+          'consensus': 'ethash',
+          'name': 'Geth',
+          'network_id': 3576,
+          'rpc_address': 'http://localhost:8084',
+          'type': 'Geth',
+          'version': 'v1.9.23-stable-8c2f2715',
+          'web3.version.node': 'Geth/v1.9.23-stable-8c2f2715/linux-amd64/go1.15'},
+ 'send': {'block_first': 1318,
+          'block_last': 1380,
+          'empty_blocks': 10,
+          'num_txs': 15000,
+          'sample_txs_successful': True},
+ 'tps': {'finalTpsAv': 161.21268075634828,
+         'peakTpsAv': 178.86482122252033,
+         'start_epochtime': 1603671526.6207182}}</small>
+</body>
+</html>

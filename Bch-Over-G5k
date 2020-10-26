@@ -1,0 +1,92 @@
+#!/usr/bin/ruby -w
+require 'cute'
+g5k = Cute::G5K::API.new()
+
+#ARGV.each do|a|   puts "Argument: #{a}" end
+time='3:00:00'
+nodes_number=2
+job1 = g5k.reserve(:nodes => nodes_number, :site => 'luxembourg', :walltime => time, :wait => true, :type => :deploy)
+Luxnodes = job1["assigned_nodes"]
+#job2 = g5k.reserve(:nodes => nodes_number, :site => 'nancy', :walltime => time, :wait => true, :type => :deploy)
+#Nancynodes = job2["assigned_nodes"]
+#job3 = g5k.reserve(:nodes => 1, :site => 'lille', :walltime => time, :wait => true, :type => :deploy)
+#Lillenodes = job3["assigned_nodes"]
+#job4 = g5k.reserve(:nodes => nodes_number, :site => 'sophia', :walltime => time, :wait => true, :type => :deploy)
+#Sophianodes = job4["assigned_nodes"]
+
+#job5 = g5k.reserve(:nodes => nodes_number, :site => 'rennes', :walltime => time, :wait => true, :type => :deploy)
+#Rennesnodes = job5["assigned_nodes"]
+#job6 = g5k.reserve(:nodes => nodes_number, :site => 'nantes', :walltime => time, :wait => true, :type => :deploy)
+#Nantesnodes = job6["assigned_nodes"]
+#job7 = g5k.reserve(:nodes => nodes_number, :site => 'lyon', :walltime => time, :wait => true, :type => :deploy)
+#Lyonnodes = job7["assigned_nodes"]
+#job8 = g5k.reserve(:nodes => nodes_number, :site => 'grenoble', :walltime => time, :wait => true, :type => :deploy) #prolem with ipaddress
+#Grenoblenodes = job8["assigned_nodes"]
+
+#nodes= Luxnodes+Nancynodes+Sophianodes+Rennesnodes+Lyonnodes+Grenoblenodes
+#nodes= Nancynodes+Sophianodes+Rennesnodes+Nantesnodes
+nodes=Luxnodes
+puts "All nodes are reserved"
+
+puts nodes
+
+# Save Nodes names
+File.open("nodes.txt", "w+") do |f|
+  f.puts(nodes)
+end
+
+g5k.deploy(job1, :env => 'ubuntu1804-x64-min', :wait => true)
+puts "LUXMBOURG NODES READY :)"
+#g5k.deploy(job2, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Nancy NODES READY :)"
+#g5k.deploy(job3, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "LILLE NODES READY :)"
+#g5k.deploy(job4, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Sophia NODES READY :)"
+#g5k.deploy(job5, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Rennes NODES READY :)"
+#g5k.deploy(job6, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Nantes NODES READY :)"
+#g5k.deploy(job7, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Lyon NODES READY :)"
+#g5k.deploy(job8, :env => 'ubuntu1404-x64-min', :wait => true)
+#puts "Grenoble NODES READY :)"
+
+output = File.open( "static-nodes.json","w" )
+nodeslink=[]
+puts "Running commands"
+
+#ssh = Net::SSH::Multi::Session
+
+Net::SSH::Multi.start do |ssh|
+
+nodes.each { |n| ssh.use "root@#{n}" }
+ ssh.exec!("sudo apt-get update")
+ ssh.exec!("sudo apt-get install -y git")
+ ssh.exec!("git clone https://github.com/snt-sedan/Blockchain-Testbed.git") #Download needed software
+ ssh.exec!("chmod u+x Blockchain-Testbed/Blockchain/ethereum/*.sh") #make the script executable
+ ssh.exec!("Blockchain-Testbed/Blockchain/ethereum/install.sh")
+ ssh.exec!("Blockchain-Testbed/Blockchain/ethereum/init.sh")#creat a user and run Gensis command
+ ssh.exec!("Blockchain-Testbed/Blockchain/ethereum/workloads.sh")#compile the workload generator
+# ssh.exec!("chmod u+x Blockchain-Testbed/*.sh")
+# ssh.exec!("Blockchain-Testbed/run-monitor.sh") # start MGEN in Listening mode
+
+end
+
+puts "Generate static node address"
+# We needd to get the address of the static node
+output = File.open( "static-nodes.json","w" )
+nodeslink=[]
+for @hostname in nodes
+  @username = "root"
+  @password = ""
+  @cmd = "Blockchain-Testbed/Blockchain/ethereum/GenerateStaticNode.sh"
+  ssh = Net::SSH.start(@hostname, @username, :password => @password)
+  res = ssh.exec!(@cmd)
+  nodeslink.push(res)
+  ssh.close
+end
+output<<'[ '+nodeslink.join(',')+' ]'
+output.close
+puts "Experiment preparation finished."
+puts nodes
