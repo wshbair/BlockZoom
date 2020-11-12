@@ -216,10 +216,10 @@ Reset(){
     header
     printf "${Purple}STOP & RESET  NODES - MENU ${NC}\n"
     echo "------------------------------------------------------------------------"
-    echo "1. Stop all nodes \n\n"    
-    echo "2. Reinitialize nodes with a default configuration \n\n"
-    echo "3. Release Grid'5000 reserved nodes (ToDo) \n\n"
-    echo "4. Back to main menu \n\n"
+    printf "1. Stop all nodes\n"    
+    printf "2. Reinitialize nodes with a default configuration \n"
+    printf "3. Release Grid'5000 reserved nodes (ToDo)\n"
+    printf "4. Back to main menu \n"
     local choice
 	read -p "Enter choice [ 1 - 3] " choice
 	case $choice in
