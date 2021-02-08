@@ -8,4 +8,4 @@ echo "deb https://repos.ripple.com/repos/rippled-deb focal stable" | \
     sudo tee -a /etc/apt/sources.list.d/ripple.list
 sudo apt -y update    
 sudo apt -y install rippled
-systemctl status rippled.service  
+systemctl is-active rippled.service
