@@ -11,3 +11,4 @@ sudo apt -y install rippled
 systemctl is-active rippled.service
 
 sudo apt-get install collectd -y
+sudo apt install python-pip -y
