@@ -21,30 +21,4 @@ sudo apt-get install python-software-properties python make -y
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# Clone the statsd project 
-git clone https://github.com/etsy/statsd.git
-cd ./statsd
-
-# Create a config file for statsd
-cp ./statsd/exampleConfig.js ./statsd/config.js
-$EDITOR ./statsd/config.js
-
-# Install foreman so we can run our process though and Procfile and easily export to Upstart
-sudo gem install foreman
-# echo -e "\nexport PATH=/usr/local/bin:~/bin:$PATH\n" >> ~/.bashrc && source ~/.bashrc
-# Shoreman would be another option, but doesn't have an export command
-# mkdir ~/bin && curl https://github.com/hecticjeff/shoreman/raw/master/shoreman.sh -sLo ~/bin/shoreman && chmod 755 ~/bin/shoreman
-
-# Create .env and Procfile
-echo "statsd: node ./statsd/stats.js ./statsd/config.js" >> Procfile
-touch .env
-
-# Export to upstart
-sudo foreman export upstart /etc/init -a statsd -u $USER
-
-# Start the process 
-sudo start statsd
-
-# Stop the process when necessary
-#sudo stop stat
-
+sudo git clone https://github.com/etsy/statsd.git /opt/statsd
