@@ -9,3 +9,5 @@ echo "deb https://repos.ripple.com/repos/rippled-deb focal stable" | \
 sudo apt -y update    
 sudo apt -y install rippled
 systemctl is-active rippled.service
+
+sudo apt-get install collectd -y
