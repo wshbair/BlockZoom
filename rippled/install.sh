@@ -18,9 +18,8 @@ sudo apt-get install git-core -y
 
 # Install Nodejs
 sudo apt-get install python-software-properties python make -y
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs -y
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Clone the statsd project 
 git clone https://github.com/etsy/statsd.git
@@ -48,4 +47,4 @@ sudo start statsd
 
 # Stop the process when necessary
 #sudo stop stat
-sudo apt install npm
+
