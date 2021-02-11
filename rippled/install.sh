@@ -47,4 +47,5 @@ sudo foreman export upstart /etc/init -a statsd -u $USER
 sudo start statsd
 
 # Stop the process when necessary
-#sudo stop statsd
+#sudo stop stat
+sudo apt install npm
