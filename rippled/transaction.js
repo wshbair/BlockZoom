@@ -32,9 +32,7 @@ const payment = {
 }
 
 const api = new RippleAPI({
-  //server: 'wss://s1.ripple.com'                 // MAINNET
-  //server: 'wss://s.altnet.rippletest.net:51233'   // TESTNET
-  server: 'ws://localhost:6006'
+  server: 'wss://127.0.0.1:6006'
 })
 
 api.connect().then(() => {
