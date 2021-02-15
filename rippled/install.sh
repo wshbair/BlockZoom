@@ -6,8 +6,8 @@ wget -q -O - "https://repos.ripple.com/repos/api/gpg/key/public" | \
   sudo apt-key add -
 echo "deb https://repos.ripple.com/repos/rippled-deb focal stable" | \
     sudo tee -a /etc/apt/sources.list.d/ripple.list
-sudo apt -y update    
-sudo apt -y install rippled
+sudo apt -y update --allow-unauthenticated --allow-insecure-repositories
+sudo apt -y install rippled --allow-unauthenticated
 systemctl is-active rippled.service
 
 sudo apt-get install collectd -y
