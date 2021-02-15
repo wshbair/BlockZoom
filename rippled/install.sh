@@ -20,7 +20,7 @@ sudo apt-get install git-core -y
 sudo apt-get install python-software-properties python make -y
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
+sudo apt install npm -y
 npm i ripple-lib
 
 sudo git clone https://github.com/etsy/statsd.git /opt/statsd
