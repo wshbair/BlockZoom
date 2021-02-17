@@ -32,7 +32,7 @@ const payment = {
 }
 
 const api = new RippleAPI({
-  server: 'wss://127.0.0.1:6006'
+  server: 'ws://127.0.0.1:6006'
 })
 
 api.connect().then(() => {
