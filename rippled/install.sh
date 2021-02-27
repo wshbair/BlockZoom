@@ -9,10 +9,10 @@ echo "deb https://repos.ripple.com/repos/rippled-deb focal stable" | \
 sudo apt -y update --allow-unauthenticated --allow-insecure-repositories
 
 #Install Rippled 1.6.0 
-#sudo apt-get install rippled=1.6.0-1
+sudo apt-get install rippled=1.6.0-1
 
 #Install Rippled 1.7.0 
-sudo apt-get install rippled
+#sudo apt-get install rippled
 
 #sudo apt -y install rippled --allow-unauthenticated
 sudo systemctl stop rippled.service
