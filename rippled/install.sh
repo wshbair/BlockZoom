@@ -12,7 +12,7 @@ sudo apt -y update --allow-unauthenticated --allow-insecure-repositories
 sudo apt-get install rippled=1.6.0-1
 
 #Install Rippled 1.7.0 
-sudo apt-get install rippled
+#sudo apt-get install rippled
 
 #sudo apt -y install rippled --allow-unauthenticated
 sudo systemctl stop rippled.service
